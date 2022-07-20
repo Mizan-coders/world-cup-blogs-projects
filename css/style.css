@@ -67,3 +67,46 @@ header .left-hero-image {
 header img {
     width: 100%;
 }
+/* header end */
+/* Main section */
+main {
+    width: 80%;
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+}
+/* Main section end */
+/* side bar sections  */
+aside {
+    display: flex;
+    flex-direction: column;
+    min-width: 240px;
+    height: max-content;
+    padding: 30px 20px;
+    margin-right: 20px;
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    position: sticky;
+    top: 10px;
+}
+
+aside a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-secondary);
+    background-color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+aside a:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+aside a:hover {
+    color: white;
+    background-color: var(--color-primary);
+}
+/* side bar sections  end*/
