@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 :root {
-    --color-primary: orangered;
+    --clr-primary: rgb(191, 82, 43);
     --color-secondary: rgba(0, 0, 0, 0.95);
 }
 
@@ -47,19 +47,28 @@ a.button-link {
     display: inline-block;
     text-decoration: none;
     color: white;
-    background-color: var(--color-primary);
+    /* background-color: var(--clr-primary); */
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
     padding: 15px 20px;
     border-radius: 5px;
     font-weight: bold;
     margin-bottom: 10px;
 }
+a.button-link:hover{
+background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
 
+.active{
+    background-color: var(--color-primary);
+    color: #ffffff;
+}
 header .fa-eye {
     margin-left: 5px;
     vertical-align: middle;
 }
 
-header .left-hero-image {
+header .right-hero-image {
     align-self: flex-end;
     margin-bottom: -3px;
 }
@@ -67,7 +76,7 @@ header .left-hero-image {
 header img {
     width: 100%;
 }
-/* header end */
+
 /* Main section */
 main {
     width: 80%;
@@ -75,8 +84,8 @@ main {
     position: relative;
     margin: 0 auto;
 }
-/* Main section end */
-/* side bar sections  */
+
+/* Sidebar */
 aside {
     display: flex;
     flex-direction: column;
@@ -107,118 +116,13 @@ aside a:not(:last-of-type) {
 
 aside a:hover {
     color: white;
-    background-color: var(--color-primary);
+    background-color: var(--clr-primary);
 }
 .active{
-    background-color: var(--color-primary);
+    background-color: var(--clr-primary);
     color: #ffffff;
 }
-/* side bar sections  end*/
-/* Blogs  section style start*/
-#blogs {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    flex: 1;
-}
-
-.blog {
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 16px 16px 0 0;
-}
-
-.blog img {
-    width: 100%;
-}
-
-.blog-details {
-    padding: 15px;
-}
-
-a.blog-link {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--color-secondary);
-    background-color: white;
-    border: 1px solid var(--color-secondary);
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin-bottom: 15px;
-    transition: .3s;
-}
-
-a.blog-link:hover {
-    color: white;
-    background-color: var(--color-primary);
-    border: 1px solid var(--color-primary);
-}
-
-.blog-info {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-top: 10px;
-    color: rgba(0, 0, 0, 0.7);
-}
-
-.post-time::before {
-    display: inline-block;
-    text-rendering: auto;
-    font: var(--fa-font-regular);
-    content: "\f017";
-    margin-right: 10px;
-}
-
-.post-comment::before {
-    display: inline-block;
-    text-rendering: auto;
-    font: var(--fa-font-regular);
-    content: "\f4ad";
-    margin-right: 10px;
-}
-/* tablet button to show*/
-.tablet-show {
-    display: none;
-}
-/* blogs section end */
-
-/* Upcoming section start */
-#upcoming-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    flex: 1;
-}
-
-.u-match {
-    padding: 20px 5%;
-    text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-}
-
-.u-match .team-flags {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-}
-
-.team-flags img {
-    width: 30%;
-}
-
-.team-name {
-    font-weight: bold;
-    margin: 20px 0 10px;
-}
-
-.match-time {
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.7);
-}
-/* Upcoming section End */
- /* Footer section style */
+/* Footer */
 footer {
     padding: 60px 0 40px;
     margin-top: 60px;
@@ -257,25 +161,25 @@ footer ul li {
 }
 
 .footer-link:hover {
-    color: var(--color-primary);
+    color: var(--clr-primary);
     text-decoration: underline;
     text-underline-offset: 5px;
 }
 
 footer h3 {
-    font-size: 25px;
+    font-size: 20px;
     margin: 50px 0 30px;
 }
 
-footer ul.footer-social-icons {
+footer ul.footer-icons {
     gap: 30px;
 }
 
-.footer-social-icons a {
+.footer-icons a {
     text-decoration: none;
 }
 
-.footer-social-icons a {
+.footer-icons a {
     display: block;
     position: relative;
     font-size: 22px;
@@ -287,19 +191,204 @@ footer ul.footer-social-icons {
     transition: .3s;
 }
 
-.footer-social-icons .fa-brands {
+.footer-icons .fa-brands {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.footer-social-icons a:hover {
-    background-color: var(--color-primary);
-    border: 1px solid var(--color-primary);
+.footer-icons a:hover {
+    background-color: var(--clr-primary);
+    border: 1px solid var(--clr-primary);
 }
-/* Footer style end  */
-/* Responsive for mobile devices  */
+
+/* Blog page section */
+#blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    flex: 1;
+}
+
+.blog {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 15px 15px 0 0;
+}
+
+.blog img {
+    width: 100%;
+}
+
+.blog-details {
+    padding: 15px;
+}
+
+a.blog-link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-secondary);
+    background-color: white;
+    border: 1px solid var(--color-secondary);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    transition: .3s;
+}
+
+a.blog-link:hover {
+    color: white;
+    background-color: var(--clr-primary);
+    border: 1px solid var(--clr-primary);
+}
+
+.blog-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.post-time::before {
+    display: inline-block;
+    text-rendering: auto;
+    font: var(--fa-font-regular);
+    content: "\f017";
+    margin-right: 10px;
+}
+
+.post-comment::before {
+    display: inline-block;
+    text-rendering: auto;
+    font: var(--fa-font-regular);
+    content: "\f4ad";
+    margin-right: 10px;
+}
+
+/* Button for tablet */
+.tablet-button {
+    display: none;
+}
+
+/* Upcoming matches page section */
+#upcoming-matches {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    flex: 1;
+}
+
+.u-match-list {
+    padding: 20px 5%;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.u-match-list .team-flags {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.team-flags img {
+    width: 30%;
+}
+
+.team-name {
+    font-weight: bold;
+    margin: 20px 0 10px;
+}
+
+.match-time {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+
+/* Responsive for tablet */
+@media screen and (max-width: 768px) {
+
+    /* Header */
+    header {
+        width: 90%;
+        padding: 40px 5% 0;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    header p {
+        margin: 20px 0;
+    }
+
+    a.button-link {
+        padding: 10px 15px;
+    }
+
+    /* Main section */
+    main {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    /* Sidebar */
+    aside {
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: white;
+        margin: 30px 0;
+        padding: 0;
+        position: relative;
+    }
+
+    aside a.sidebar-link {
+        display: block;
+        margin-bottom: 0;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    /* Footer */
+    footer {
+        margin: 0;
+    }
+
+    footer ul.footer-links {
+        row-gap: 30px;
+    }
+
+    /* Blog page section */
+    #blogs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .blog {
+        border-radius: 15px 15px 0 0;
+    }
+
+    /* Button for tablet */
+    #blogs .tablet-hide {
+        display: none;
+    }
+
+    .tablet-button {
+        display: block;
+        align-self: center;
+        margin: 30px 0 50px;
+    }
+
+    /* Upcoming matches page section */
+    #upcoming-matches {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+
 /* Responsive for phone */
 @media screen and (max-width: 480px) {
 
@@ -313,7 +402,7 @@ footer ul.footer-social-icons {
         margin: 10px auto 0;
     }
 
-    header .hero-image {
+    header .right-hero-image {
         align-self: center;
     }
 
@@ -351,7 +440,7 @@ footer ul.footer-social-icons {
         border-radius: 20px 20px 0 0;
     }
 
-    .tablet-show {
+    .tablet-button {
         display: none;
     }
 
