@@ -299,3 +299,64 @@ footer ul.footer-social-icons {
     border: 1px solid var(--color-primary);
 }
 /* Footer style end  */
+/* Responsive for mobile devices  */
+/* Responsive for phone */
+@media screen and (max-width: 480px) {
+
+    /* Header */
+    header {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 10% 0;
+        margin: 10px auto 0;
+    }
+
+    header .hero-image {
+        align-self: center;
+    }
+
+    /* Sidebar */
+    aside {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    aside a {
+        width: max-content;
+    }
+
+    aside a:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 60px 0 40px;
+        margin-top: 60px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+
+    /* Blog section */
+    #blogs {
+        grid-template-columns: 1fr;
+    }
+
+    .blog {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .tablet-show {
+        display: none;
+    }
+
+    /* Upcoming matches page section */
+    #upcoming-matches {
+        grid-template-columns: 1fr;
+    }
+}
