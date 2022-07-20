@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 :root {
-    --clr-primary: rgb(191, 82, 43);
+    --color-primary: rgb(191, 82, 43);
     --color-secondary: rgba(0, 0, 0, 0.95);
 }
 
@@ -47,7 +47,7 @@ a.button-link {
     display: inline-block;
     text-decoration: none;
     color: white;
-    /* background-color: var(--clr-primary); */
+    /* background-color: var(--color-primary); */
     background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
     padding: 15px 20px;
     border-radius: 5px;
@@ -116,10 +116,10 @@ aside a:not(:last-of-type) {
 
 aside a:hover {
     color: white;
-    background-color: var(--clr-primary);
+    background-color: var(--color-primary);
 }
 .active{
-    background-color: var(--clr-primary);
+    background-color: var(--color-primary);
     color: #ffffff;
 }
 /* Footer */
@@ -161,7 +161,7 @@ footer ul li {
 }
 
 .footer-link:hover {
-    color: var(--clr-primary);
+    color: var(--color-primary);
     text-decoration: underline;
     text-underline-offset: 5px;
 }
@@ -199,8 +199,8 @@ footer ul.footer-icons {
 }
 
 .footer-icons a:hover {
-    background-color: var(--clr-primary);
-    border: 1px solid var(--clr-primary);
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
 }
 
 /* Blog page section */
@@ -218,6 +218,7 @@ footer ul.footer-icons {
 
 .blog img {
     width: 100%;
+    border-radius: 15px 15px 0px 0px;
 }
 
 .blog-details {
@@ -238,8 +239,8 @@ a.blog-link {
 
 a.blog-link:hover {
     color: white;
-    background-color: var(--clr-primary);
-    border: 1px solid var(--clr-primary);
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
 }
 
 .blog-info {
@@ -256,6 +257,7 @@ a.blog-link:hover {
     font: var(--fa-font-regular);
     content: "\f017";
     margin-right: 10px;
+    color: var(--color-primary);
 }
 
 .post-comment::before {
@@ -264,6 +266,7 @@ a.blog-link:hover {
     font: var(--fa-font-regular);
     content: "\f4ad";
     margin-right: 10px;
+    color: var(--color-primary);
 }
 
 /* Button for tablet */
@@ -371,7 +374,7 @@ a.blog-link:hover {
     }
 
     /* Button for tablet */
-    #blogs .tablet-hide {
+    #blogs .tablet-hidden {
         display: none;
     }
 
